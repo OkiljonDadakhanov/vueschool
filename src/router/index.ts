@@ -15,6 +15,10 @@ const router = createRouter({
       path: '/projects/:id',
       component: () => import('@/views/SingleProjectView.vue'),
     },
+    {
+      path: '/:catchAll(.*)*',
+      component: () => import('@/views/NotFoundView.vue'),
+    },
   ],
 })
 
